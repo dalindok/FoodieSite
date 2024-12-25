@@ -1,10 +1,10 @@
 import React from 'react';
-import RestaurantListing from './pages/RestaurantListing';
+import UserAccount from './pages/UserAccount';
 
 function App() {
   return (
     <div>
-      <RestaurantListing/>
+      <UserAccount/>
     </div>
   );
 }
