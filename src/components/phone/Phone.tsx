@@ -39,7 +39,7 @@ const Phone = () => {
         </div>
 
         {/* Continue Button */}
-        <button className="mt-6 bg-yellow-400 text-black font-medium py-3 px-20 rounded-2xl shadow-md hover:bg-yellow-500 transition">
+        <button className="mt-6 bg-customColor text-black font-medium py-3 px-20 rounded-2xl shadow-md hover:bg-customColor transition">
           Continue
         </button>
       </div>

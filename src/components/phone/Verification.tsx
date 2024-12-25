@@ -65,7 +65,7 @@ const Verification: React.FC = () => {
         </div>
 
         {/* Continue Button */}
-        <button className="mt-10 outline outline-2 outline-customColor w-60 text-black font-medium py-3 px-8 rounded-lg hover:bg-yellow-500 transition">
+        <button className="mt-10 outline outline-2 outline-customColor w-72 text-black font-medium py-1 px-8 rounded-xl hover:bg-customColor transition">
           Didn't get code
         </button>
       </div>

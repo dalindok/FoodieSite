@@ -27,7 +27,7 @@ const Edit = () => {
               alt="Profile"
               className="w-24 h-24 rounded-full object-cover mr-10"
             />
-            <button className="my-auto px-6 py-2 bg-yellow-500 font-base rounded-2xl hover:bg-yellow-600 transition">
+            <button className="my-auto px-6 py-2 bg-customColor font-base rounded-2xl hover:bg-customColor transition">
               Change
             </button>
           </div>
@@ -46,7 +46,7 @@ const Edit = () => {
             id="name"
             type="text"
             placeholder="maya"
-            className="w-full px-4 py-1 font-base text-lg border border-yellow-500 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full px-4 py-1 font-base text-lg border border-current rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-customColor"
           />
 
           {/* Gender Select */}
@@ -58,7 +58,7 @@ const Edit = () => {
           </label>
           <select
             id="gender"
-            className="w-full font-base px-4 py-2 text-lg border border-yellow-500 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full font-base px-4 py-2 text-lg border border-customColor rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-customColor"
           >
             <option value="female">Female</option>
             <option value="male">Male</option>
@@ -68,10 +68,10 @@ const Edit = () => {
 
         {/* Buttons */}
         <div className="flex justify-between w-full mb-3 ml-10">
-          <button className="px-6 py-2 border ml-16 border-customColor font-base rounded-lg hover:bg-customColor transition">
+          <button className="px-6 border ml-16 border-customColor font-base rounded-xl hover:bg-customColor transition">
             Cancel
           </button>
-          <button className="px-6 py-2 bg-customColor mr-36 md:mr-16 font-base rounded-lg hover:bg-customColor transition">
+          <button className="px-6 bg-customColor mr-36 md:mr-16 font-base rounded-xl hover:bg-customColor transition">
             Save
           </button>
         </div>
