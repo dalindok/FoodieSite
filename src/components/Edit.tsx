@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../../assets/sideAccount/user.png";
+import profile from "../assets/sideAccount/user.png"
 
 const Edit = () => {
   return (
@@ -27,7 +27,7 @@ const Edit = () => {
               alt="Profile"
               className="w-24 h-24 rounded-full object-cover mr-10"
             />
-            <button className="my-auto px-6 py-2 bg-yellow-500 font-base rounded-lg hover:bg-yellow-600 transition">
+            <button className="my-auto px-6 py-2 bg-yellow-500 font-base rounded-2xl hover:bg-yellow-600 transition">
               Change
             </button>
           </div>
