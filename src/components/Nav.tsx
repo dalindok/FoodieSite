@@ -1,24 +1,28 @@
 import { FiAlignJustify, FiChevronDown, FiSearch } from "react-icons/fi";
 import logo from "../assets/logo.png";
+
 const Nav = () => {
   return (
-    <div className="flex flex-row bg-customColor font-zain justify-between">
-      <div className="my-6 ml-8">
-        <FiAlignJustify size={25} />
+    <div className="flex items-center bg-customColor font-zain justify-between px-8 py-4">
+      {/* Left: Logo */}
+      <div className="flex items-center">
+        <img
+          src={logo}
+          alt="Logo"
+          className="rounded-full w-[60px] sm:w-[80px]"
+        />
       </div>
-      <div className="flex flex-row space-x-20 text-lg">
-        <p className="mt-8">Home</p>
-        <div className="flex flex-row mt-8">
-          <p className="">Restaurant</p>
-          <FiChevronDown className="mt-1" />
+      <div className="hidden sm:flex flex-row space-x-10 text-lg">
+        <p className="hover:text-gray-700 cursor-pointer">Home</p>
+        <div className="flex flex-row items-center cursor-pointer hover:text-gray-700">
+          <p>Restaurant</p>
+          <FiChevronDown className="ml-1" />
         </div>
-        <img src={logo} alt="Logo" className="rounded-full w-[80px]" />
-        <p className="mt-8">About</p>
-        <p className="mt-8">Account</p>
+        <p className="hover:text-gray-700 cursor-pointer">About</p>
+        <p className="hover:text-gray-700 cursor-pointer">Account</p>
+        <FiSearch size={25} className="hidden sm:block" />
       </div>
-      <div className="my-6 mr-8">
-        <FiSearch size={25} />
-      </div>
+      <FiAlignJustify size={25} className="sm:hidden" />
     </div>
   );
 };
