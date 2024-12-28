@@ -4,7 +4,6 @@ import logo from "../assets/logo.png";
 const Nav = () => {
   return (
     <div className="flex items-center bg-customColor font-zain justify-between px-8 py-4">
-      {/* Left: Logo */}
       <div className="flex items-center">
         <img
           src={logo}
