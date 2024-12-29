@@ -1,5 +1,5 @@
 import React from 'react';
-import UserAccount from './pages/UserAccount';
+import UserAccount from './pages/RestaurantDetail';
 
 function App() {
   return (
