@@ -9,7 +9,7 @@ function RestaurantListing() {
     <div>
       <Nav />
       <Header />
-      <p className="text-center justify-center font-zain font-semibold underline underline-offset-8 decoration-customColor text-2xl mt-10">
+      <p className="text-center justify-center font-zain font-semibold underline underline-offset-8  text-2xl mt-10">
         Most Popular
       </p>
       <Search />

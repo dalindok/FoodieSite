@@ -5,8 +5,9 @@ const SubHead = () => {
   return (
     <div className=" flex flex-col items-center pt-10">
       <div>
-        <p className="font-zain text-2xl font-semibold">FoodieSite is</p>
-        <hr />
+        <p className="font-zain text-2xl font-semibold underline underline-offset-8">
+          FoodieSite
+        </p>
       </div>
       <div className="flex flex-wrap flex-col justify-between p-5 sm:space-x-8 sm:p-10 sm:px-60 sm:flex-row">
         <section className="text-center flex items-center flex-col w-full sm:w-1/4">
