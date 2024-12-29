@@ -7,21 +7,21 @@ function Header() {
     <div className="flex flex-col md:flex-row bg-slate-100 p-5">
       <div className="flex flex-col flex-grow ">
         <div className="flex items-center mt-10 font-zain">
-          <p className="text-customColor font-semibold pl-6 text-2xl">
+          <p className="text-customColor font-semibold pl-2 sm:pl-6 text-2xl">
             FoodieSite
           </p>
           <img src={wink} alt="star wink" className="w-6" />
         </div>
-        <div className="pl-16 p-6">
+        <div className="sm:pl-16 pl-8 p-6">
           <div className="flex items-center mt-8">
             <p className="text-5xl font-extrabold font-zain">Find and Book</p>
-            <img src={spoon} alt="spoon" className="w-8 ml-5" />
+            <img src={spoon} alt="spoon" className="w-8 sm:ml-5" />
           </div>
           <p className="text-4xl font-semibold font-zain">
             The Best Restaurant in Town
           </p>
           <div className="flex flex-col">
-            <p className="my-4 text-start w-[700px]">
+            <p className="my-4 text-start sm:w-[700px]">
               Discover hidden gems where every dish is crafted with passion,
               celebrating culture and flavor. Whether it's a quick bite or a
               gourmet feast, we'll help you find the perfect spot for a
