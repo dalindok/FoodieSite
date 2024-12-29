@@ -17,67 +17,64 @@ const RestaurantInformation = () => {
   ];
 
   return (
-    <div className=" p-5 font-zain bg-white shadow-lg h-96">
+    <div className="p-5 font-zain bg-white shadow-lg">
       {listings.map((listing, index) => (
         <div
           key={index}
-          className="rounded-tl-lg-3xl w-full m-5 bg-white flex md:flex-row flex-col justify-between"
+          className="rounded-lg bg-white flex flex-col md:flex-row justify-between m-5 shadow-md"
         >
           {/* Restaurant Image */}
           <img
             src={listing.image}
             alt={`Cover of ${listing.name}`}
-            className="rounded-tl-3xl rounded-br-3xl w-3/4 md:w-2/4 h-80 ml-auto mr-auto md:ml-5 md:mr-5 md:my-auto"
+            className="rounded-t-lg md:rounded-l-lg md:rounded-t-none w-full md:w-2/5 h-64 object-cover"
           />
 
           {/* Details Section */}
-          <div className="flex flex-col p-6 sm:w-2/3 md:ml-5 mt-5">
-            <div className="text-lg space-y-3">
-              <div className="flex">
-                <p className="text-2xl font-semibold">Name :</p>
-                <p className="text-xl my-auto ml-28">{listing.name}</p>
+          <div className="flex flex-col p-6 sm:w-full md:w-3/5">
+            <div className="md:space-y-4 ">
+              <div className="flex flex-col sm:flex-row">
+                <p className="text-lg font-semibold">Name:</p>
+                <p className="text-base ml-2 sm:ml-8">{listing.name}</p>
               </div>
-              <div className="flex">
-                <p className="text-2xl font-semibold">Location :</p>
-                <p className="text-base my-auto ml-20">{listing.location}</p>
+              <div className="flex flex-col sm:flex-row">
+                <p className="text-lg font-semibold">Location:</p>
+                <p className="text-base ml-2 sm:ml-8">{listing.location}</p>
               </div>
-              <div className="flex">
-                <p className="text-2xl font-semibold">Contact :</p>
-                <p className="text-base my-auto mx-20"> {listing.contact}</p>
+              <div className="flex flex-col sm:flex-row">
+                <p className="text-lg font-semibold">Contact:</p>
+                <p className="text-base ml-2 sm:ml-8">{listing.contact}</p>
               </div>
-              <div className="flex">
-                <p className="text-2xl font-semibold">Open Hours :</p>
-                <p className="text-base my-auto mx-10"> {listing.openHours}</p>
+              <div className="flex flex-col sm:flex-row">
+                <p className="text-lg font-semibold">Open Hours:</p>
+                <p className="text-base ml-2 sm:ml-8">{listing.openHours}</p>
               </div>
-              <div className="flex items-center">
-                <p className="text-2xl font-semibold">Rating :</p>
-                <div className="flex ml-24 my-auto ">
+              <div className="flex flex-col sm:flex-row">
+                <p className="text-lg font-semibold">Rating:</p>
+                <div className="flex ml-0 sm:ml-8">
                   {[...Array(5)].map((_, i) => (
                     <FaStar
                       key={i}
-                      className={`text-2xl mx-1 ${
+                      className={`text-lg ${
                         i < listing.rating ? "text-customColor" : "text-gray-300"
                       }`}
                     />
                   ))}
                 </div>
               </div>
-              <div className="flex ">
-                <p className="text-2xl font-semibold">Description :</p>
-                <p className="text-sm font-light mt-2 w-80 ml-12"> {listing.description}</p>
+              <div className="flex flex-col sm:flex-row">
+                <p className="text-lg font-semibold">Description:</p>
+                <p className="text-sm ml-2 sm:ml-8">{listing.description}</p>
               </div>
             </div>
-
-            {/* Buttons Section */}
-           
-          </div> 
+          </div>
         </div>
       ))}
-       <div className="flex justify-center mt-10">
-              <button className="px-10 py-2 font-medium bg-customColor text-black rounded-2xl shadow hover:shadow-lg hover:text-white">
-                Create Booking
-              </button>
-            </div>
+      <div className="flex justify-center mt-5">
+        <button className="px-6 py-2 font-medium bg-customColor text-black rounded-lg shadow hover:shadow-lg hover:text-white">
+          Create Booking
+        </button>
+      </div>
     </div>
   );
 };

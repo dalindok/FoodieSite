@@ -32,14 +32,15 @@ const Booking = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-4 font-zain">
-      <h1 className="text-lg font-bold mb-4">Table Booking</h1>
+    <div className="max-w-lg mx-auto p-6 font-zain bg-white border border-gray-300 rounded-lg shadow-lg w-[400px] mb-5 mt-5">
+      <h1 className="text-lg font-bold mb-4 text-center">Table Booking</h1>
 
+      {/* Number of People */}
       <div className="mb-4 relative">
-        <div className="relative flex items-center border border-yellow-500 rounded-md">
-          <BsPeople className="text-4xl text-black pl-3" />
+        <div className="relative flex items-center border border-customColor rounded-md h-12">
+          <BsPeople className="text-3xl text-black pl-3" />
           <select
-            className="w-full p-2 border-0 outline-none rounded-md focus:ring-0"
+            className="w-full p-2 border-0 outline-none rounded-md focus:ring-0 text-base"
             value={numberOfPeople}
             onChange={(e) => setNumberOfPeople(e.target.value)}
           >
@@ -53,8 +54,9 @@ const Booking = () => {
         </div>
       </div>
 
-      <div className="relative flex items-center border border-yellow-500 rounded-md mb-4">
-        <SlCalender className="text-4xl text-black pl-3" />
+      {/* Date Picker */}
+      <div className="relative flex items-center border border-customColor rounded-md mb-4 h-12">
+        <SlCalender className="text-3xl text-black pl-3" />
         <DatePicker
           className="w-full p-2 rounded-md text-base text-black font-light"
           selected={date}
@@ -65,36 +67,40 @@ const Booking = () => {
         />
       </div>
 
-      <div className="relative flex items-center border border-yellow-500 rounded-md p-2 mb-5">
-        <IoTimeOutline className="text-4xl text-black" />
-        <div className="relative w-full">
-          <TimePicker
-            value={time}
-            onChange={handleTimeChange}
-            disableClock={true}
-            format="hh:mm a"
-            className="w-full border-0 outline-none focus:ring-0 focus:border-transparent"
-            clearIcon={null}
-          />
+      {/* Time Picker */}
+      <div className="relative flex items-center border border-customColor rounded-md h-12 mb-5 p-2">
+        <IoTimeOutline className="text-3xl text-black" />
+        <TimePicker
+          value={time}
+          onChange={handleTimeChange}
+          disableClock={true}
+          format="hh:mm a"
+          className="w-full border-0 outline-none focus:ring-0"
+          clearIcon={null}
+        />
+      </div>
+
+      {/* Selected Time */}
+      {time && <p className="text-gray-700 mb-5">Selected Time: {time}</p>}
+
+      {/* Table Selector */}
+      <div className="mb-4">
+        <label className="block text-lg font-semibold mb-2">Select Table</label>
+        <div className="w-full h-24 rounded-md bg-gray-100 flex items-center justify-center">
+         
         </div>
       </div>
 
-      {time && <p className="text-gray-700 mb-5">Selected Time: {time}</p>}
-
-      <div className="mb-4">
-        <label className="block text-xl font-semibold mb-2">Select Table</label>
-        <div className="w-full h-32 rounded-md bg-gray-100"></div>
-      </div>
-
+      {/* Buttons */}
       <div className="flex justify-between">
         <button
-          className="px-4 py-2 bg-white text-black rounded-md border-customColor border-2 font-light hover:bg-customColor hover:shadow-lg"
+          className="px-4 py-2 bg-white text-black rounded-md border-customColor border-2 font-light hover:bg-customColor hover:shadow-lg w-24"
           onClick={handleCancel}
         >
           Cancel
         </button>
         <button
-          className="px-4 py-2 bg-white text-black rounded-md border-customColor border-2 font-light hover:bg-customColor hover:shadow-lg"
+          className="px-4 py-2 bg-white text-black rounded-md border-customColor border-2 font-light hover:bg-customColor hover:shadow-lg w-24"
           onClick={handleConfirm}
         >
           Confirm

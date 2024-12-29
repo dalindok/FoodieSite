@@ -33,12 +33,12 @@ const CategoriesMenu = () => {
   const filteredMenu = activeTab === "All" ? menuData : menuData.filter((item) => item.category === activeTab);
 
   return (
-    <div className="font-zain pl-20 pr-20 pt-0.5 pb-5 bg-slate-50">
+    <div className="font-zain md:pl-20 pl-2 md:pr-20 pr-2 pt-0.5 pb-5 bg-slate-50">
       <Search />
       <p className="text-2xl font-semibold text-center mb-6 mt-5">Categories</p>
 
       {/* Category Tabs */}
-      <div className="flex flex-row justify-center space-x-48 mb-5">
+      <div className="flex flex-row justify-center md:space-x-48 sm:space-x-12 space-x-3 mb-5">
         {categories.map((category) => (
           <div
             key={category.name}
@@ -56,14 +56,14 @@ const CategoriesMenu = () => {
       </div>
       <p className="text-2xl font-semibold text-center mb-6">Menu</p>
       {/* Menu Items */}
-      <div className=" grid-cols-3 grid gap-6 mt-10">
+      <div className=" md:grid-cols-3 grid-rows grid gap-6 mt-10">
         {filteredMenu.map((item) => (
           <div className="flex flex-col border p-4 rounded-lg shadow-md bg-white">
           <div key={item.id} className=" flex flex-row">
-            <img src={item.image} alt={item.name} className="w-full h-32 object-cover rounded-md mb-4" />
+            <img src={item.image} alt={item.name} className="md:w-full w-40 h-32 object-cover rounded-md mb-2" />
             <div className="flex flex-col ml-5">
-            <h3 className="text-lg font-semibold mx-auto">{item.name}</h3>
-            <p className="text-sm text-gray-600 items-start my-auto">{item.description}</p>
+            <h3 className="text-lg font-semibold md:mx-auto ml-5 mt-2">{item.name}</h3>
+            <p className="text-sm text-gray-600 items-start my-auto ml-5 md:-ml-0">{item.description}</p>
           </div> 
           </div> <p className="text-lg font-bold mt-2 ml-10">{item.price}</p>
           </div>

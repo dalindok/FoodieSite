@@ -6,9 +6,9 @@ import Booking from "../components/Booking";
 const RestaurantDetail = () => {
   return (
     <div>
-     {/* <RestaurantInformation/>
+     <RestaurantInformation/>
      <Menu/>
-     <Map/> */}
+     <Map/>
      <Booking/>
     </div>
   );
