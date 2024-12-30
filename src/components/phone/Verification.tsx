@@ -10,20 +10,23 @@ const Verification: React.FC = () => {
   const handleInput = (e: React.FormEvent<HTMLInputElement>, index: number) => {
     const target = e.target as HTMLInputElement; // Explicitly cast the target
     const value = target.value;
-  
+
     if (!/^\d?$/.test(value)) {
       target.value = ""; // Allow only a single digit
       return;
     }
-  
+
     // Automatically move to the next input when a digit is entered
     if (value && inputRefs.current[index + 1]) {
       inputRefs.current[index + 1]?.focus();
     }
   };
-  
+
   // Handle Enter key to navigate to the next input
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>, index: number) => {
+  const handleKeyDown = (
+    e: React.KeyboardEvent<HTMLInputElement>,
+    index: number
+  ) => {
     if (e.key === "Enter" && inputRefs.current[index + 1]) {
       inputRefs.current[index + 1]?.focus();
     }
@@ -32,13 +35,12 @@ const Verification: React.FC = () => {
   return (
     <div className="flex items-center justify-center h-screen font-zain">
       <div className="flex flex-col items-center justify-center h-80 w-96 shadow-md md:w-1/3 px-6 bg-white relative rounded-lg">
-        
         {/* Close Icon */}
         <div className="absolute top-7 left-4 text-black text-xl cursor-pointer">
           <IoIosArrowBack />
         </div>
         <div className="absolute top-4 right-4 text-black text-3xl cursor-pointer">
-        <IoIosClose />
+          <IoIosClose />
         </div>
 
         {/* Title */}

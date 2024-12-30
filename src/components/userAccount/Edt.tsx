@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../assets/sideAccount/user.png"
+import profile from "../assets/sideAccount/user.png";
 
 const Edit = () => {
   return (

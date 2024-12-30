@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Restaurant from "../../assets/userAccount/restaurant.jpg";
+import Restaurant from "../../assets/Restaurant.jpg";
 
 const HistoryList = () => {
   const [restaurants, setRestaurants] = useState([
