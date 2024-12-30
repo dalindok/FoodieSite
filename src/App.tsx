@@ -1,21 +1,6 @@
-import Home from "./pages/Home";
-import RestaurantListing from "./pages/RestaurantListing";
-import AboutUs from "./pages/AboutUs";
-import UserAccount from "./pages/UserAccount";
-import RestaurantDetail from "./pages/RestaurantDetail";
-import SearchPage from "./components/SearchPage";
-
+import RouteNavigation from "./routes/routes";
 const App = () => {
-  return (
-    <div>
-      {/* <Home />
-      <RestaurantListing />
-      <RestaurantDetail />
-      <AboutUs />
-      <UserAccount /> */}
-      <SearchPage />
-    </div>
-  );
+  return <RouteNavigation />;
 };
 
 export default App;

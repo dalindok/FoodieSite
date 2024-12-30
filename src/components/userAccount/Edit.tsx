@@ -1,5 +1,5 @@
-import React from "react";
-import profile from "../assets/sideAccount/user.png";
+// import React from "react";
+import Profile from "../../assets/sideAccount/Profile.png";
 
 const Edit = () => {
   return (
@@ -23,7 +23,7 @@ const Edit = () => {
           </label>
           <div className="flex flex-row items-start mb-6">
             <img
-              src={profile} // Replace with the actual photo URL
+              src={Profile} // Replace with the actual photo URL
               alt="Profile"
               className="w-24 h-24 rounded-full object-cover mr-10"
             />
