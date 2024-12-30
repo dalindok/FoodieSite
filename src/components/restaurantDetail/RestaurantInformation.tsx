@@ -1,5 +1,5 @@
 import { FaStar } from "react-icons/fa";
-import Restaurant from "../../assets/Restaurant.jpg";
+import Restaurant from "../../assets/restaurant.jpg";
 
 const RestaurantInformation = () => {
   const listings = [
@@ -20,8 +20,7 @@ const RestaurantInformation = () => {
       {listings.map((listing, index) => (
         <div
           key={index}
-          className="rounded-lg w-full  bg-white flex flex-col md:flex-row md:justify-center md:space-x-32"
-        >
+          className="rounded-lg w-full  bg-white flex flex-col md:flex-row md:justify-center md:space-x-32">
           {/* Restaurant Image */}
           <img
             src={listing.image}
