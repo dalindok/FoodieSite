@@ -1,46 +1,46 @@
-import restaurant from "../../assets/restaurantListing/restaurant.jpg";
+import Restaurant from "../../assets/Restaurant.jpg";
 import RestaurantItem from "../RestaurantItem";
 const listings: IRestaurant[] = [
   {
     id: 1,
     name: "Street Wok",
     description: "Modern food with a rustic twist.",
-    image: restaurant,
+    image: Restaurant,
     price: 12.23,
   },
   {
     id: 2,
     name: "Urban Bites",
     description: "Modern food with a rustic twist.",
-    image: restaurant,
+    image: Restaurant,
     price: 12.23,
   },
   {
     id: 3,
     name: "Cozy Corner",
     description: "A place to relax and enjoy.",
-    image: restaurant,
+    image: Restaurant,
     price: 12.23,
   },
   {
     id: 4,
     name: "Food Haven",
     description: "Savor every bite in a delightful setting.",
-    image: restaurant,
+    image: Restaurant,
     price: 12.23,
   },
   {
     id: 5,
     name: "Tasty Treats",
     description: "Delicious food, unforgettable taste.",
-    image: restaurant,
+    image: Restaurant,
     price: 12.23,
   },
   {
     id: 6,
     name: "Grill & Chill",
     description: "Experience food with a difference.",
-    image: restaurant,
+    image: Restaurant,
     price: 12.23,
   },
 ];

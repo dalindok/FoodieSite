@@ -131,7 +131,7 @@ const CategoriesMenu = () => {
       <div className=" md:grid-cols-3 grid-rows grid gap-6 mt-10">
         {filteredMenu.map((item) => (
           <div className="flex flex-col border p-4 rounded-lg shadow-md bg-white">
-            <div key={item.id} className=" flex flex-row">
+            <div key={item.id} className="flex flex-row">
               <img
                 src={item.image}
                 alt={item.name}

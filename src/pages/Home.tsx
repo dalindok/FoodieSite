@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import SubHead from "../components/home/SubHead";
 import Listing from "../components/restaurantListing/Listing";
 import Header from "../components/Header";
+import Search from "../components/restaurantListing/Search";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Nav />
       <Header />
       <SubHead />
+      <Search />
       <p className="text-center font-zain font-semibold underline underline-offset-8  text-2xl mt-10">
         Recommended
       </p>

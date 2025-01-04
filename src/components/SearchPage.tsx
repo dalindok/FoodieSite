@@ -1,4 +1,4 @@
-import { FaSearch, FaTimes } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa6";
 import Listing from "./restaurantListing/Listing";
 import Search from "./restaurantListing/Search";
@@ -16,7 +16,6 @@ const SearchPage = () => {
         <div>
           <Search />
         </div>
-
         <div className="pt-14">
           <button>
             <FaTimes className="h-6 w-6 " />

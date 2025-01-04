@@ -1,8 +1,10 @@
 import food from "../assets/restaurantListing/food.png";
 import wink from "../assets/restaurantListing/wink.png";
 import spoon from "../assets/restaurantListing/spoon.png";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigation = useNavigate();
   return (
     <div className="flex flex-col md:flex-row bg-slate-100 p-5">
       <div className="flex flex-col flex-grow ">
@@ -28,7 +30,12 @@ function Header() {
               memorable meal.
             </p>
           </div>
-          <button className="mt-4 font-medium bg-customColor py-2 px-4 text-center rounded-lg border-2 border-customColor hover:bg-white">
+          <button
+            onClick={() => {
+              navigation("/about");
+            }}
+            className="mt-4 font-medium bg-customColor py-2 px-4 text-center rounded-lg border-2 border-customColor hover:bg-white"
+          >
             About Us
           </button>
         </div>

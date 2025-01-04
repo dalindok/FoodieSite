@@ -1,7 +1,7 @@
 import image from "../../assets/about/image.jpg";
 const AboutUs = () => {
   return (
-    <div className="bg-yellow-200 flex justify-between flex-col sm:flex-row ">
+    <div className="bg-slate-100 flex justify-between flex-col sm:flex-row ">
       <div className="text-center mx-2 my-6 sm:text-start sm:mx-20 sm:my-36">
         <h2 className="text-4xl font-bold font-zain">About Us &#9734;</h2>
         <p className="text-lg sm:w-[600px] pt-5">
