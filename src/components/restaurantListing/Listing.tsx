@@ -1,4 +1,4 @@
-import Restaurant from "../../assets/Restaurant.jpg";
+import Restaurant from "../../assets/restaurant.jpg";
 import RestaurantItem from "../RestaurantItem";
 const listings: IRestaurant[] = [
   {

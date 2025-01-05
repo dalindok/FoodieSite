@@ -4,7 +4,7 @@ import AboutUs from "../pages/AboutUs";
 import RestaurantListing from "../pages/RestaurantListing";
 import UserAccount from "../pages/UserAccount";
 import RestaurantDetail from "../pages/RestaurantDetail";
-import SearchPage from "../components/SearchPage";
+import SearchPage from "../pages/SearchPage";
 
 const RouteNavigation = () => {
   return (

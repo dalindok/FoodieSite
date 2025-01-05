@@ -1,5 +1,5 @@
 import { FaStar } from "react-icons/fa";
-import Restaurant from "../../assets/Restaurant.jpg";
+import Restaurant from "../../assets/restaurant.jpg";
 // import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Booking from "../../pages/Booking";
@@ -53,8 +53,7 @@ const RestaurantInformation = () => {
       {listings.map((listing, index) => (
         <div
           key={index}
-          className="rounded-lg w-full  bg-white flex flex-col md:flex-row md:justify-center md:space-x-32"
-        >
+          className="rounded-lg w-full  bg-white flex flex-col md:flex-row md:justify-center md:space-x-32">
           {/* Restaurant Image */}
           <img
             src={listing.image}
@@ -115,8 +114,7 @@ const RestaurantInformation = () => {
       <div className="flex justify-center mt-10">
         <button
           onClick={handleToggleBooking}
-          className="px-6 py-2 font-medium bg-customColor text-black rounded-xl shadow hover:shadow-lg hover:text-white transition"
-        >
+          className="px-6 py-2 font-medium bg-customColor text-black rounded-xl shadow hover:shadow-lg hover:text-white transition">
           Create Booking
         </button>
       </div>
@@ -124,11 +122,10 @@ const RestaurantInformation = () => {
       {isBookingVisible && (
         <div style={popupOverlayStyles}>
           <div style={popupContentStyles}>
-            <Booking />
+            <Booking onCancel={handleToggleBooking} />
             <button
-              className="absolute top-2 right-4 text-5xl text-gray-600 hover:text-black"
-              onClick={handleToggleBooking}
-            >
+              className="absolute top-2 right-3 text-2xl text-gray-600 hover:text-black"
+              onClick={handleToggleBooking}>
               ×
             </button>
           </div>

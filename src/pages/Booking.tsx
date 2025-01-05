@@ -6,7 +6,12 @@ import "react-time-picker/dist/TimePicker.css";
 import { BsPeople } from "react-icons/bs";
 import { SlCalender } from "react-icons/sl";
 import { IoTimeOutline } from "react-icons/io5";
-const Booking = () => {
+
+interface BookingProps {
+  onCancel: () => void;
+}
+
+const Booking: React.FC<BookingProps> = ({ onCancel }) => {
   const [numberOfPeople, setNumberOfPeople] = useState<string>("");
   const [date, setDate] = useState<Date | null>(null);
   const [time, setTime] = useState<string | null>(null);
@@ -25,6 +30,7 @@ const Booking = () => {
   };
 
   const handleCancel = () => {
+    onCancel();
     setNumberOfPeople("");
     setDate(null);
     setTime(null);
@@ -41,8 +47,7 @@ const Booking = () => {
           <select
             className="w-full p-2 border-0 outline-none rounded-md focus:ring-0 text-base"
             value={numberOfPeople}
-            onChange={(e) => setNumberOfPeople(e.target.value)}
-          >
+            onChange={(e) => setNumberOfPeople(e.target.value)}>
             <option value="">Number of people</option>
             {Array.from({ length: 10 }, (_, index) => (
               <option key={index + 1} value={index + 1}>
@@ -92,14 +97,12 @@ const Booking = () => {
       <div className="flex justify-between">
         <button
           className="px-4 py-2 bg-white text-black rounded-md border-customColor border-2 font-light hover:bg-customColor hover:shadow-lg w-24"
-          onClick={handleCancel}
-        >
+          onClick={handleCancel}>
           Cancel
         </button>
         <button
           className="px-4 py-2 bg-white text-black rounded-md border-customColor border-2 font-light hover:bg-customColor hover:shadow-lg w-24"
-          onClick={handleConfirm}
-        >
+          onClick={handleConfirm}>
           Confirm
         </button>
       </div>

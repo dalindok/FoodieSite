@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Restaurant from "../../assets/Restaurant.jpg";
+import Restaurant from "../../assets/restaurant.jpg";
 
 const HistoryList = () => {
   const [restaurants, setRestaurants] = useState([
@@ -37,8 +37,7 @@ const HistoryList = () => {
       {restaurants.map((restaurant, index) => (
         <div
           key={index}
-          className="flex flex-row items-start p-4 bg-white rounded-lg shadow-xl"
-        >
+          className="flex flex-row items-start p-4 bg-white rounded-lg shadow-xl">
           {/* Restaurant Image */}
           <img
             src={Restaurant}

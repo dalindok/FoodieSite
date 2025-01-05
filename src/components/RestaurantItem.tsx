@@ -40,8 +40,7 @@ const RestaurantItem = (props: { item: IRestaurant }) => {
   return (
     <div
       key={props.item.id}
-      className="rounded-tl-lg-3xl sm:w-80 shadow-lg m-5 bg-white flex flex-col justify-between"
-    >
+      className="rounded-tl-lg-3xl sm:w-80 shadow-lg m-5 bg-white flex flex-col justify-between">
       <img
         src={props.item.image}
         alt={`Cover of ${props.item.name}`}
@@ -67,14 +66,12 @@ const RestaurantItem = (props: { item: IRestaurant }) => {
           onClick={() => {
             onNavigateDetail(props.item.id);
           }}
-          className="py-1 px-2 m-2 font-medium bg-customColor w-20 text-center rounded-lg border-2 border-customColor hover:bg-white"
-        >
+          className="py-1 px-2 m-2 font-medium bg-customColor w-20 text-center rounded-lg border-2 border-customColor hover:bg-white">
           <p>Detail</p>
         </button>
         <button
           onClick={handleToggleBooking}
-          className="py-1 px-2 m-2 font-medium bg-customColor  text-center rounded-lg border-2 border-customColor hover:bg-white"
-        >
+          className="py-1 px-2 m-2 font-medium bg-customColor  text-center rounded-lg border-2 border-customColor hover:bg-white">
           <p>Create Booking</p>
         </button>
       </div>
@@ -82,11 +79,10 @@ const RestaurantItem = (props: { item: IRestaurant }) => {
       {isBookingVisible && (
         <div style={popupOverlayStyles}>
           <div style={popupContentStyles}>
-            <Booking />
+            <Booking onCancel={handleToggleBooking} />
             <button
-              className="absolute top-2 right-2 text-xl text-gray-600 hover:text-black"
-              onClick={handleToggleBooking}
-            >
+              className="absolute top-2 right-3 text-2xl text-gray-600 hover:text-black"
+              onClick={handleToggleBooking}>
               ×
             </button>
           </div>
