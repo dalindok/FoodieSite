@@ -1,6 +1,8 @@
-import React from "react";
-import profile from "../assets/sideAccount/user.png";
-const SideAccount = () => {
+import profile from "../../assets/sideAccount/Profile.png";
+interface SideAccountProps {
+  onNavigate: (link: string) => void;
+}
+const SideAccount: React.FC<SideAccountProps> = ({ onNavigate }) => {
   return (
     <div className="relative h-screen w-60 md:w-72 shadow-xl font-zain">
       <div className="flex flex-col ">
@@ -23,10 +25,14 @@ const SideAccount = () => {
         <div className="w-32 md:w-40 mx-auto border-t border-customColor my-6"></div>
         <div className="ml-5">
           {/* Buttons */}
-          <button className="w-48 md:w-60 border border-customColor text-black font-semibold py-1 rounded-lg mb-4 hover:bg-customColor transition">
+          <button
+            onClick={() => onNavigate("/list-booking")}
+            className="w-48 md:w-60 border border-customColor text-black font-semibold py-1 rounded-lg mb-4 hover:bg-customColor transition">
             My Booking
           </button>
-          <button className="w-48 md:w-60 border border-customColor text-black font-semibold py-1 rounded-lg hover:bg-customColor transition">
+          <button
+            onClick={() => onNavigate("/edit-profile")}
+            className="w-48 md:w-60 border border-customColor text-black font-semibold py-1 rounded-lg hover:bg-customColor transition">
             Edit
           </button>
         </div>
